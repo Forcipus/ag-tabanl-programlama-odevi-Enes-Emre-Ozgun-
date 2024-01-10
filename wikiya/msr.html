@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikiya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wikiya.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; 
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px; 
+            width: 100%;
+            margin: 0 auto; 
+            padding: 20px; 
+            box-sizing: border-box;
+            text-align: left; 
+            background-color: #e3edf7; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        figure {
+            border: 1px #cccccc solid;
+            padding: 4px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        figcaption {
+            background-color: white;
+            color: black;
+            font-style: italic;
+            padding: 2px;
+            text-align: center;
+        }
+    </style>        
+</head>
+<body>
+    <script>
+        // Open the Modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        // Close the Modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+    <div class="container" id="myLayoutGrid1">
+        <div id="LayoutGrid1">
+            <div class="col-1">
+                <div class="col-1-padding">
+                    <div id="mySidebarLogo">
+                        <img src="images/677873.png" width="100" height="100" id="sidebarLogo">
+                    </div>
+                    <!--sidebar Text 1-->
+                    <div id="mySidebarText1">
+                        <span id="myText1"><strong>W</strong></span><span id="myText11"><strong>ikiya</strong></span>
+                        <span id="myText2"><strong></strong></span><span id="myText21"><br></span><span id="myText22">The Not Free Enclopedia</span>
+                    </div>
+                    <!--Sidebar Menu-->
+                    <div id="mySidebarMenu1">
+                        <span><a href="#" class="style2" title="Front page">Front Page</a></span>
+                        <span><a href="#" class="style2" title="Guides">Guides</a></span>
+                        <span><a href="#" class="style2" title="Related articles">Related</a></span>
+                        <span><a href="#" class="style2" title="Contacts">Contact Us</a></span>             
+                    </div>
+                </div>
+            </div>
+            <!--col2-->
+            <div id="col-2">
+                <div id="myHeading1">
+                    <h1 id="myHeading1">Molten salt reactor</h1>
+                </div>
+                <hr id="indexLine1">
+                <div id="myText" class="content">
+                    <span id="myText">
+                        <figure class="image-container">
+                            <div class="row">
+                                <div class="column">
+                                  <img src="images/220px-Molten_Salt_Reactor.svg.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                                  <figcaption>Example of a molten salt reactor scheme</figcaption>
+                                </div>
+                            </div>
+                        </figure>
+                        A <strong>molten salt reactor (MSR) </strong>is a class of nuclear fission reactor in which the primary nuclear reactor 
+                        coolant and/or the fuel is a mixture of molten salt with a fissionable material.  
+                        <br><br>
+                        Two research MSRs operated in the United States in the mid-20th century. The 1950s Aircraft Reactor Experiment 
+                        (ARE) was primarily motivated by the technology's compact size, while the 1960s Molten-Salt Reactor Experiment (MSRE) 
+                        aimed to demonstrate a nuclear power plant using a thorium fuel cycle in a breeder reactor.                     
+                        <br><br>
+                        Increased research into Generation IV reactor designs renewed interest in the 21st century with multiple nations starting 
+                        projects. As of May 2023, China had not announced the ignition of its TMSR-LF1 thorium unit following its scheduled 
+                        date of February 2023.
+                        <br><br>
+                        MSRs eliminate the nuclear meltdown scenario present in water-cooled reactors because the fuel mixture is kept in a molten 
+                        state. The fuel mixture is designed to drain without pumping from the core to a containment vessel in emergency scenarios, where 
+                        it solidifies, quenching the reaction. In addition, hydrogen evolution does not occur. This eliminates the risk of hydrogen 
+                        explosions (as in the Fukushima nuclear disaster). They operate at or close to atmospheric pressure, rather than the 
+                        75–150 times atmospheric pressure of a typical light-water reactor (LWR). This reduces the need and cost for reactor pressure 
+                        vessels. The gaseous fission products (Xe and Kr) have little solubility in the fuel salt, and can be safely captured as 
+                        they bubble out of the fuel, rather than increasing the pressure inside the fuel tubes, as happens in conventional 
+                        reactors. MSRs can be refueled while operating (essentially online-nuclear reprocessing) while conventional reactors shut 
+                        down for refueling (notable exceptions include pressure tube heavy water reactors like the CANDU or the Atucha-class 
+                        PHWRs, and British-built gas-cooled reactors such as Magnox, AGR). MSR operating temperatures are around 700 °C (1,292 °F), 
+                        significantly higher than traditional LWRs at around 300 °C (572 °F). This increases electricity-generation efficiency 
+                        and process-heat opportunities. 
+                        <br><br>
+                        Relevant design challenges include the corrosivity of hot salts and the changing chemical composition of the salt as 
+                        it is transmuted by the neutron flux.
+                        <br><br>
+                    </span>
+                </div>              
+            </div>
+            <!-- Heading -->
+                <div id="myHeading1">
+                <h3 id="Heading1">Properties</h3>
+                </div>
+                <hr id="indexLine1">
+            <div id="myText" class="content">
+                <span id="myText">
+                    MSRs, especially those with fuel in the molten salt, offer lower operating pressures, and higher 
+                    temperatures. In this respect an MSR is more similar to a liquid metal cooled reactor than to a 
+                    conventional light water cooled reactor. MSR designs are often breeding reactors with a closed 
+                    fuel cycle—as opposed to the once-through fuel currently used in conventional nuclear power generators. 
+                    <br><br>
+                    MSRs exploit a negative temperature coefficient of reactivity and a large allowable temperature rise to 
+                    prevent criticality accidents. For designs with the fuel in the salt, the salt thermally expands 
+                    immediately with power excursions. In conventional reactors the negative reactivity is delayed since 
+                    the heat from the fuel must be transferred to the moderator. An additional method is to place a separate, 
+                    passively cooled container below the reactor. Fuel drains into the container during malfunctions or 
+                    maintenance, which stops the reaction.
+                    <br><br>
+                    The temperatures of some designs are high enough to produce process heat, which led them to be 
+                    included on the GEN-IV roadmap.
+                    <br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Advantages</h3>
+            </div>
+            <div id="myText" class="content">
+                <span id="myText" class="content"> 
+                    <br>
+                    MSRs offer many potential advantages over light water reactors:                    
+                    <br>
+                    <ul>
+                        <li>Passive decay heat removal is achieved in MSRs. In some designs, the fuel and the coolant are a single fluid, so a loss of coolant carries the fuel with it. Fluoride salts dissolve poorly in water, and do not form burnable hydrogen. The molten salt coolant is not damaged by neutron bombardment, though the reactor vessel is.</li><br>
+                        <li>A low-pressure MSR does not require an expensive, steel core containment vessel, piping, and safety equipment. However, most MSR designs place radioactive fluid in direct contact with pumps and heat exchangers.</li><br>
+                        <li>MSRs enable cheaper closed nuclear fuel cycles, because they can operate with slow neutrons. Closed fuel cycles can reduce environmental impacts: chemical separation turns long-lived actinides into reactor fuel. Discharged wastes are mostly fission products with shorter half-lives. This can reduce the needed containment to 300 years versus the tens of thousands of years needed by light-water reactor spent fuel.</li><br>
+                        <li>The fuel's liquid phase can be pyroprocessed to separate fission products from fuels. This may have advantages over conventional reprocessing.</li><br>
+                        <li>Fuel rod fabrication is replaced with salt synthesis.</li><br>
+                        <li>Some designs are compatible with fast neutrons, which can "burn" transuranic elements such as 240
+                            Pu, 241
+                            Pu (reactor grade plutonium) from LWRs.</li><br>
+                        <li>An MSR can react to load changes in under 60 seconds (unlike LWRs that suffer from xenon poisoning).</li><br>
+                        <li>Molten salt reactors can run at high temperatures, yielding high thermal efficiency. This reduces size, expense, and environmental impacts.</li><br>
+                        <li>MSRs can offer a high "specific power", (high power at low mass), as demonstrated by ARE.</li><br>
+                        <li>Potential neutron economy suggests that MSR may be able to exploit the neutron-poor thorium fuel cycle.</li><br>
+                    </ul>
+                    <br>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Disadvantages</h3>
+            </div>
+            <div id="myText" class="content">
+                <span id="myText">
+                    <br>
+                    <ul>
+                        <li>In circulating-fuel-salt designs, radionuclides dissolved in fuel contact equipment such as pumps and heat exchangers, potentially requiring fully remote maintenance.</li><br>
+                        <li>Some MSRs require onsite chemical processing to manage core mixture and remove fission products.</li><br>
+                        <li>Regulatory changes to accommodate non-traditional design features</li><br>
+                        <li>Some MSR designs rely on expensive nickel alloys to contain the molten salt. Such alloys are prone to embrittlement under high neutron flux.</li><br>
+                        <li>Corrosion risk. Molten salts require careful management of their oxidation state to manage corrosion risks. This is particularly challenging for circulating designs, in which a mix of isotopes and their decay products circulate through the reactor. Static designs benefit from 
+                            modularising the problem: the fuel salt is contained within fuel pins whose regular replacement, primarily due to neutron irradiation, is normalized; while the coolant salt has a simpler chemical composition and does not pose a corrosion risk either to the fuel pins or to 
+                            the reactor vessel. (Regarding redox state management, see the descriptions for the stable salt reactor's fuel and coolant salts). MSRs developed at ORNL in the 60s were safe to operate only for a few years, and operated at only about 650 °C (1,202 °F). Corrosion risks 
+                            include dissolution of chromium by liquid fluoride thorium salts at greater than 700 °C (1,292 °F), hence endangering stainless steel components. Neutron radiation can transmute common alloying agents such as Co and Ni, shortening lifespan. Lithium salts such as FLiBe warrant the use of 7
+                            Li to reduce tritium generation (tritium can permeate stainless steels, cause embrittlement, and escape into the environment). ORNL developed Hastelloy N to help address these issues, while other structural steels may be acceptable, such as 316H, 800H, and inco 617.</li><br>
+                        <li>Some MSR designs can be turned into a breeder reactor to produce weapons-grade nuclear material.</li><br>
+                        <li>MSRE and ARE used high enriched uranium approaching weapons-grade. These levels would be illegal in most modern power plant regulatory regimes. Most modern designs employ lower-enriched fuels.</li><br>
+                        <li>Thermal MSRs have lower breeding ratios than fast-neutron breeders, though their doubling time may be shorter.</li><br>
+                    </ul>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Coolant</h3>
+                <hr id="indexLine1">
+            <div id="myText" class="content">
+                <span id="myText">
+                    MSRs can be cooled in various ways, including using molten salts. 
+                    <br><br>
+                    Molten-salt-cooled solid-fuel reactors are variously called "molten 
+                    salt reactor system" in the Generation IV proposal, molten salt converter reactors (MSCR), advanced high-temperature reactors (AHTRs), 
+                    or fluoride high-temperature reactors (FHR, preferred DOE designation).
+                    <br><br>
+                    FHRs cannot reprocess fuel easily and have fuel rods that need to be fabricated and validated, requiring up to twenty years from project inception. FHR retains the safety and cost advantages of a low-pressure, high-temperature coolant, also shared by liquid metal cooled reactors. Notably, steam 
+                    is not created in the core (as is present in BWRs), and no large, expensive steel pressure vessel (as required for PWRs). Since it can operate at high temperatures, the conversion of the heat to electricity can use an efficient, lightweight Brayton cycle gas turbine. 
+                    <br><br>
+                    Much of the current research on FHRs is focused on small, compact heat exchangers that reduce molten salt volumes and associated costs.
+                    <br><br>
+                    Molten salts can be highly corrosive and corrosivity increases with temperature. For the primary cooling loop, a material is needed that can withstand corrosion at high temperatures and intense radiation. Experiments show that Hastelloy-N and similar alloys are suited to these tasks at operating 
+                    temperatures up to about 700 °C. However, operating experience is limited. Still higher operating temperatures are desirable—at 850 °C (1,560 °F) thermochemical production of hydrogen becomes possible. Materials for this temperature range have not been validated, though carbon composites, 
+                    molybdenum alloys (e.g. TZM), carbides, and refractory metal based or ODS alloys might be feasible. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading1">
+                <h3 id="myHeading1">Fused salt selection</h3>
+            </div>
+            <div id="myText" class="content">
+                <span id="myText">
+                    The salt mixtures are chosen to make the reactor safer and more practical. 
+                    <br>
+                    <figure>
+                        <div class="row">
+                            <div class="column">
+                              <img src="images/220px-FLiBe.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                              <figcaption>Molten FLiBe</figcaption>
+                            </div>
+                        </div>
+                    </figure>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Fluorine</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    Fluorine has only one stable isotope (19F), and does not easily become radioactive under neutron bombardment. Compared to chlorine and other halides, fluorine also absorbs 
+                    fewer neutrons and slows ("moderates") neutrons better. Low-valence fluorides boil at high temperatures, though many pentafluorides and hexafluorides boil at low temperatures. 
+                    They must be very hot before they break down into their constituent elements. Such molten salts are "chemically stable" when maintained well below their boiling points. 
+                    Fluoride salts dissolve poorly in water, and do not form burnable hydrogen. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Chlorine</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    Chlorine has two stable isotopes (35Cl and 37C ), as well as a slow-decaying isotope between them which facilitates neutron absorption by 35Cl. 
+                    <br><br>
+                    Chlorides permit fast breeder reactors to be constructed. Much less research has been done on reactor designs using chloride salts. Chlorine, unlike fluorine, must be 
+                    purified to isolate the heavier stable isotope, 37Cl, thus reducing production of sulfur tetrachloride that occurs when 35Cl absorbs a neutron to become 36Cl, 
+                    then degrades by beta decay to 36S. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Lithium</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    Lithium must be in the form of purified 7Li, because 6Li effectively captures neutrons and produces tritium. Even if pure 7Li is used, salts containing lithium cause significant tritium production, comparable with heavy water reactors.  
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Mixtures</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    Reactor salts are usually close to eutectic mixtures to reduce their melting point. A low melting point simplifies melting the salt at startup and reduces the risk of the salt freezing as it is cooled in the heat exchanger. 
+                    <br><br>
+                    Due to the high "redox window" of fused fluoride salts, the redox potential of the fused salt system can be changed. Fluorine-lithium-beryllium ("FLiBe") can be used with beryllium additions to lower the redox potential 
+                    and nearly eliminate corrosion. However, since beryllium is extremely toxic, special precautions must be engineered into the design to prevent its release into the environment. Many other salts can cause plumbing corrosion, 
+                    especially if the reactor is hot enough to make highly reactive hydrogen. 
+                    <br><br>
+                    To date, most research has focused on FLiBe, because lithium and beryllium are reasonably effective moderators and form a eutectic salt mixture with a lower melting point than each of the constituent salts. Beryllium also 
+                    performs neutron doubling, improving the neutron economy. This process occurs when the beryllium nucleus emits two neutrons after absorbing a single neutron. For the fuel carrying salts, generally 1% or 2% (by mole) of UF4 is 
+                    added. Thorium and plutonium fluorides have also been used. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Fused salt purification</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    Techniques for preparing and handling molten salt were first developed at ORNL. The purpose of salt purification is to eliminate oxides, sulfur and metal impurities. Oxides could result in the deposition of solid particles in 
+                    reactor operation. Sulfur must be removed because of its corrosive attack on nickel-based alloys at operational temperature. Structural metal such as chromium, nickel, and iron must be removed for corrosion control. 
+                    <br><br>
+                    A water content reduction purification stage using HF and helium sweep gas was specified to run at 400 °C. Oxide and sulfur contamination in the salt mixtures were removed using gas sparging of HF/H2 mixture, with the salt heated 
+                    to 600 °C. Structural metal contamination in the salt mixtures were removed using hydrogen gas sparging, at 700 °C. Solid ammonium hydrofluoride was proposed as a safer alternative for oxide removal.
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Fused salt processing</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    The possibility of online processing can be an MSR advantage. Continuous processing would reduce the inventory of fission products, control corrosion and improve neutron economy by removing fission products with high neutron 
+                    absorption cross-section, especially xenon. This makes the MSR particularly suited to the neutron-poor thorium fuel cycle. Online fuel processing can introduce risks of fuel processing accidents, which can trigger release of radio isotopes. 
+                    <br><br>
+                    In some thorium breeding scenarios, the intermediate product protactinium 233Pa would be removed from the reactor and allowed to decay into highly pure 233U, an attractive bomb-making material. More modern designs propose to use a lower specific 
+                    power or a separate thorium breeding blanket. This dilutes the protactinium to such an extent that few protactinium atoms absorb a second neutron or, via a (n, 2n) reaction (in which an incident neutron is not absorbed but instead knocks a 
+                    neutron out of the nucleus), generate 232U. Because 232U has a short half-life and its decay chain contains hard gamma emitters, it makes the isotopic mix of uranium less attractive for bomb-making. This benefit would come with the added 
+                    expense of a larger fissile inventory or a 2-fluid design with a large quantity of blanket salt. 
+                    <br><br>
+                    The necessary fuel salt reprocessing technology has been demonstrated, but only at laboratory scale. A prerequisite to full-scale commercial reactor design is the R&D to engineer an economically competitive fuel salt cleaning system. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Fuel reprocessing</h3>
+                <hr id="indexLine1">
+            <div id="myText" class="content">
+                <span id="myText">
+                    <figure>
+                        <div class="row">
+                            <div class="column">
+                              <img src="images/Changing_composition_molten_salt_reactor-en.svg.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                              <figcaption>Changes in the composition of a MSR fast neutron (kg/GW)</figcaption>
+                            </div>
+                        </div>
+                    </figure>
+                    Reprocessing refers to the chemical separation of fissionable uranium and plutonium from spent fuel.[19] Such recovery could increase the risk of nuclear proliferation. In the United States the regulatory regime has varied dramatically across administrations.
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Costs and economics</h3>
+                <hr id="indexLine1">
+            <div id="myText" class="content">
+                <span id="myText">
+                    A systematic literature review from 2020 concludes that there is very limited information on economics and finance of MSRs, with low quality of the information and that cost estimations are uncertain.
+                    <br><br>
+                    In the specific case of the stable salt reactor (SSR) where the radioactive fuel is contained as a molten salt within fuel pins and the primary circuit is not radioactive, operating costs are likely to be lower.
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Types of molten salt reactors</h3>
+                <hr id="indexLine1">
+            <div id="myText" class="content">
+                <span id="myText">
+                    While many design variants have been proposed, there are three main categories regarding the role of molten salt: 
+                    <br><br>
+                    <table border="1" class="content">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Molten salt fuel - circulating</td>
+                                <td>ARE, AWB, CMSR, DMSR, EVOL, LFTR, IMSR, MSFR, MSRE, MSDR, DFR, TMSR-500, TMSR-LF</td>
+                            </tr>
+                            <tr>
+                                <td>Molten salt fuel - static</td>
+                                <td>SSR</td>
+                            </tr>
+                            <tr>
+                                <td>Molten salt coolant only</td>
+                                <td>FHR, TMSR-SF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br>
+                    The use of molten salt as fuel and as coolant are independent design choices - the original circulating-fuel-salt 
+                    MSRE and the more recent static-fuel-salt SSR use salt as fuel and salt as coolant; the DFR uses salt as fuel but metal as 
+                    coolant; and the FHR has solid fuel but salt as coolant. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Design</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    MSRs can be burners or breeders. They can be fast or thermal or epithermal. Thermal reactors typically employ a moderator (usually graphite) to slow the neutrons down 
+                    and moderate temperature. They can accept a variety of fuels (low-enriched uranium, thorium, depleted uranium, waste products) and coolants (fluoride, chloride, 
+                    lithium, beryllium, mixed). Fuel cycle can be either closed or once-through. They can be monolithic or modular, large or small. The reactor can adopt a loop, 
+                    modular or integral configuration. Variations include: 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Molten salt fast reactor</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    The molten salt fast reactor (MSFR) is a proposed design with the fuel dissolved in a fluoride salt coolant. The MSFR is one of the two variants of MSRs selected 
+                    by the Generation IV International Forum (GIF) for further development, the other being the FHR or AHTR. The MSFR is based on a fast neutron spectrum and is believed 
+                    to be a long-term substitute to solid-fueled fast reactors. They have been studied for almost a decade, mainly by calculations and determination of basic physical 
+                    and chemical properties in the European Union and Russian Federation. A MSFR is regarded sustainable because there are no fuel shortages. Operation of a MSFR 
+                    does in theory not generate or require large amounts of transuranic (TRU) elements. When steady state is achieved in a MSFR, there is no longer a need for uranium enrichment facilities. 
+                    <br><br>
+                    MSFRs may be breeder reactors. They operate without a moderator in the core such as graphite, so graphite life-span is no longer a problem. This results in a breeder 
+                    reactor with a fast neutron spectrum that operates in the Thorium fuel cycle. MSFRs contain relatively small initial inventories of 233U. MSFRs run on liquid fuel 
+                    with no solid matter inside the core. This leads to the possibility of reaching specific power that is much higher than reactors using solid fuel. The heat produced 
+                    goes directly into the heat transfer fluid. In the MSFR, a small amount of molten salt is set aside to be processed for fission product removal and then returned 
+                    to the reactor. This gives MSFRs the capability of reprocessing the fuel without stopping the reactor. This is very different compared to solid-fueled reactors because 
+                    they have separate facilities to produce the solid fuel and process spent nuclear fuel. The MSFR can operate using a large variety of fuel compositions due to its 
+                    on-line fuel control and flexible fuel processing.
+                    <br><br>
+                    The standard MSFR would be a 3000 MWth reactor that has a total fuel salt volume of 18 m3 with a mean fuel temperature of 750 °C. The core's shape is a compact 
+                    cylinder with a height to diameter ratio of 1 where liquid fluoride fuel salt flows from the bottom to the top. The return circulation of the salt, from top to bottom, 
+                    is broken up into 16 groups of pumps and heat exchangers located around the core. The fuel salt takes approximately 3 to 4 seconds to complete a full cycle. At any given 
+                    time during operation, half of the total fuel salt volume is in the core and the rest is in the external fuel circuit (salt collectors, salt-bubble separators, fuel heat 
+                    exchangers, pumps, salt injectors and pipes). MSFRs contain an emergency draining system that is triggered and achieved by redundant and reliable devices such as detection and opening 
+                    technology. During operation, the fuel salt circulation speed can be adjusted by controlling the power of the pumps in each sector. The intermediate fluid circulation speed can be 
+                    adjusted by controlling the power of the intermediate circuit pumps. The temperature of the intermediate fluid in the intermediate exchangers can be managed through the use of a 
+                    double bypass. This allows the temperature of the intermediate fluid at the conversion exchanger inlet to be held constant while its temperature is increased in a controlled 
+                    way at the inlet of the intermediate exchangers. The temperature of the core can be adjusted by varying the proportion of bubbles injected in the core since it reduces the 
+                    salt density. As a result, it reduces the mean temperature of the fuel salt. Usually the fuel salt temperature can be brought down by 100 °C using a 3% proportion of bubbles. 
+                    MSFRs have two draining modes, controlled routine draining and emergency draining. During controlled routine draining, fuel salt is transferred to actively cooled storage tanks. The 
+                    fuel temperature can be lowered before draining, this may slow down the process. This type of draining could be done every 1 to 5 years when the sectors are replaced. 
+                    Emergency draining is done when an irregularity occurs during operation. The fuel salt can be drained directly into the emergency draining tank either by active devices or 
+                    by passive means. The draining must be fast to limit the fuel salt heating in a loss of heat removal event. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Fluoride salt-cooled high-temperature reactor</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    The fluoride salt-cooled high-temperature reactor (FHR), also called advanced high temperature reactor (AHTR), is also a proposed Generation IV molten salt reactor variant 
+                    regarded promising for the long-term future. The FHR/AHTR reactor uses a solid-fuel system along with a molten fluoride salt as coolant. 
+                    <br><br>
+                    One version of the Very-high-temperature reactor (VHTR) under study was the liquid-salt very-high-temperature reactor (LS-VHTR). It uses liquid salt as a coolant in the primary 
+                    loop, rather than a single helium loop. It relies on "TRISO" fuel dispersed in graphite. Early AHTR research focused on graphite in the form of graphite rods that would be 
+                    inserted in hexagonal moderating graphite blocks, but current studies focus primarily on pebble-type fuel. The LS-VHTR can work at very high temperatures 
+                    (the boiling point of most molten salt candidates is >1400 °C); low-pressure cooling that can be used to match hydrogen production facility conditions (most thermochemical 
+                    cycles require temperatures in excess of 750 °C); better electric conversion efficiency than a helium-cooled VHTR operating in similar conditions; passive safety systems 
+                    and better retention of fission products in the event of an accident.
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Liquid fluoride thorium reactor</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    Reactors containing molten thorium salt, called liquid fluoride thorium reactors (LFTR), would tap the thorium fuel cycle. Private companies from Japan, Russia, 
+                    Australia and the United States, and the Chinese government, have expressed interest in developing this technology.
+                    <br><br>
+                    Advocates estimate that five hundred metric tons of thorium could supply U.S. energy needs for one year.
+                    The U.S. Geological Survey estimates that the largest-known U.S. thorium deposit, the Lemhi Pass district on the Montana-Idaho border, contains thorium reserves of 64,000 metric tons.
+                    <br><br>
+                    Traditionally, these reactors were known as molten salt breeder reactors (MSBRs) or thorium molten salt reactors (TMSRs), but the name LFTR was promoted as a rebrand in the early 2000s by Kirk Sorensen. 
+                    <br><br>
+                </span>
+            </div>
+            <div id="myHeading2">
+                <h3 id="Heading2">Stable salt reactor</h3>
+            <div id="myText" class="content">
+                <span id="myText">
+                    The stable salt reactor is a relatively recent concept which holds the molten salt fuel statically in traditional LWR fuel pins. Pumping of the fuel salt, and all the corrosion/deposition/maintenance/
+                    containment issues arising from circulating a highly radioactive, hot and chemically complex fluid, are no longer required. The fuel pins are immersed in a separate, non-fissionable fluoride salt which acts as primary coolant. 
+                    <br><br>
+                </span>
+            </div>
+        </div>
+        <br><br>
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+          
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/220px-Molten_Salt_Reactor.svg.png" style="width:100%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/220px-FLiBe.png" style="width:100%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/Changing_composition_molten_salt_reactor-en.svg.png" style="width:100%">
+                  </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="column">
+                <img class="demo" src="" onclick="currentSlide(1)" alt="Example of a molten salt reactor scheme">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="" onclick="currentSlide(2)" alt="Molten FLiBe">
+              </div>
+
+              <div class="column">
+                <img class="demo" src="" onclick="currentSlide(3)" alt="Changes in the composition of a MSR fast neutron (kg/GW)">
+              </div>
+
+            </div>
+        </div>
+        <div id="myFooter">
+            <div id="Footer">
+                <div class="row">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-2">
+                        <div id="myFootertext">
+                            <span id="myFooterMenu">Last edited on 12 December 2023, at 12:42 (BT). <br><br>Terms and conditions.
+                                Wikiya, all rights reserved.</span>
+                        </div>
+                        <div id="myFooterMenu">
+                            <span><a href="#" class=" style2" title="Privacy policy">Conditions</a></span>
+                            <span><a href="#" class=" style2" title="About">About</a></span>
+                            <span><a href="#" class=" style2" title="Contact">Contact</a></span>
+                            <span><a href="#" class=" style2" title="Cookie">Cookie Usage</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actinides and Fission Products</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Actinides and Fission Products by Half-life</h2>
+
+<table>
+    <tr>
+        <th rowspan="2">Decay Chain</th>
+        <th colspan="6">Half-life Range (a)</th>
+        <th colspan="6">Fission Products of 235U by Yield</th>
+    </tr>
+    <tr>
+        <th>4n</th>
+        <th>4n + 1</th>
+        <th>4n + 2</th>
+        <th>4n + 3</th>
+        <th>4.5–7%</th>
+        <th>0.04–1.25%</th>
+        <!-- Add more headers as needed -->
+    </tr>
+    <!-- Add more headers as needed -->
+    <tr>
+        <td>228Ra№</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>4–6 a</td>
+        <td>155Euþ</td>
+        <!-- Add more cells as needed -->
+    </tr>
+    <tr>
+        <td>244Cmƒ</td>
+        <td>241Puƒ</td>
+        <td>250Cf</td>
+        <td>227Ac№</td>
+        <td>10–29 a</td>
+        <td>90Sr</td>
+        <td>85Kr</td>
+        <td>113mCdþ</td>
+        <!-- Add more cells as needed -->
+    </tr>
+    <!-- Add more rows as needed -->
+</table>
+
+<p>₡: Has thermal neutron capture cross section in the range of 8–50 barns<br>
+ƒ: Fissile<br>
+№: Primarily a naturally occurring radioactive material (NORM)<br>
+þ: Neutron poison (thermal neutron capture cross section greater than 3k barns)</p>
+
+<button onclick="downloadAsPDF()">Download as PDF</button>
+
+    <script>
+        function downloadAsPDF() {
+            const pdf = new jsPDF();
+            const content = document.body;
+
+            pdf.fromHTML(content, 15, 15, { 'width': 170 });
+            pdf.save('downloaded.pdf');
+        }
+    </script>
+</body>
+
+</html>
